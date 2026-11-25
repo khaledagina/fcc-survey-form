@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning Journey Survey</title>
+  <meta name="description" content="A survey form for people learning web development. freeCodeCamp Responsive Web Design project, redesigned.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="blob b1" aria-hidden="true"></div><div class="blob b2" aria-hidden="true"></div>
+  <main class="card">
+    <header>
+      <p class="badge">Anonymous &middot; 2 minutes</p>
+      <h1 id="title">Learning Journey Survey</h1>
+      <p id="description">Tell us how you are learning web development. Your answers help other beginners pick better paths.</p>
+      <div class="steps" aria-hidden="true"><span id="fill"></span></div>
+    </header>
+
+    <form id="survey-form" action="https://www.freecodecamp.com/email-submit" method="post">
+      <div class="row">
+        <div class="field">
+          <label id="name-label" for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label id="email-label" for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label id="number-label" for="number">Age <small>(optional)</small></label>
+          <input id="number" name="age" type="number" min="10" max="99" placeholder="e.g. 18">
+        </div>
+        <div class="field">
+          <label for="dropdown">Which describes you best?</label>
+          <select id="dropdown" name="role" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="school">School student</option>
+            <option value="university">University student</option>
+            <option value="self">Self-taught learner</option>
+            <option value="career-change">Changing careers</option>
+            <option value="working">Working developer</option>
+          </select>
+        </div>
+      </div>
+
+      <fieldset class="field">
+        <legend>How long have you been learning?</legend>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="experience" value="under-6m" checked><span>Under 6 months</span></label>
+          <label class="chip"><input type="radio" name="experience" value="6-24m"><span>6 to 24 months</span></label>
+          <label class="chip"><input type="radio" name="experience" value="over-2y"><span>Over 2 years</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="field">
+        <legend>What do you want to learn next? <small>(pick any)</small></legend>
+        <div class="chips">
+          <label class="chip"><input type="checkbox" name="topic" value="javascript"><span>JavaScript</span></label>
+          <label class="chip"><input type="checkbox" name="topic" value="react"><span>React</span></label>
+          <label class="chip"><input type="checkbox" name="topic" value="backend"><span>Back end</span></label>
+          <label class="chip"><input type="checkbox" name="topic" value="ai"><span>AI and data</span></label>
+          <label class="chip"><input type="checkbox" name="topic" value="design"><span>Design</span></label>
+        </div>
+      </fieldset>
+
+      <div class="field">
+        <label for="comments">Anything else? <small id="count">0 / 300</small></label>
+        <textarea id="comments" name="comments" rows="4" maxlength="300" placeholder="Share a tip, a struggle, or a resource that helped you."></textarea>
+      </div>
+
+      <button id="submit" type="submit">Send my answers</button>
+    </form>
+    <p class="note">Built as a <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/" target="_blank" rel="noopener">freeCodeCamp</a> certification project by <a href="https://github.com/khaledagina" target="_blank" rel="noopener">Khaled Agina</a>.</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
