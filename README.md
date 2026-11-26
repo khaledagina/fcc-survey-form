@@ -6,6 +6,10 @@ This is a **freeCodeCamp Responsive Web Design certification project**, redesign
 
 **Live demo:** https://khaledagina.github.io/fcc-survey-form/
 
+## Preview
+
+![Learning Journey Survey, desktop view](https://github.com/user-attachments/assets/5a0fe592-8066-4282-9741-96307daea440)
+
 ## What changed in the redesign
 - Original content and layout instead of the sample survey
 - Chip-style radio buttons and checkboxes, live progress bar, character counter
